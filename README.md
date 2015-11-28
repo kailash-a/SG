@@ -9,7 +9,11 @@ SG
   
   -then writing @Controllers, @Services, @Repository and wiring all of them with Autowiring. and Using spring DI as per requirement.
   
-  -Time Based greeting and Total user Count is also displayed in Home Page
+  -Time Based greeting and Total user Count is also displayed in Home Page.
+  
+  -Converting Ethnic Group from Int to String.
+  
+  -Convertin weight from gms to Kg,s.
 
 ##### Importing DB values from CSV
 

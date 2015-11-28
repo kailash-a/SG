@@ -8,6 +8,8 @@ SG
   -Set Spring MVC application with proper configuration file (applicationContext.xml and spring-mvc.xml in addition to web.xml)
   
   -then writing @Controllers, @Services, @Repository and wiring all of them with Autowiring. and Using spring DI as per requirement.
+  
+  -Time Based greeting and Total user Count is also displayed in Home Page
 
 ##### Importing DB values from CSV
 

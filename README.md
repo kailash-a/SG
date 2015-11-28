@@ -32,3 +32,6 @@ At the startUp *index.jsp* is called which redirects the request to the welcome.
 ##### Further Improvements
 
 Although it doesnot meets the requirements like searching by calling Spring rest to search a user by status/id etc. but this solution can also works for small DB Store.
+
+##### Sample Screen Shot
+![alt tag](https://github.com/kailash-a/SG/blob/master/WebContent/resources/img/screenshot.png)

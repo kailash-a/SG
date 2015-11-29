@@ -155,7 +155,7 @@
 									var trHTML = '';
 									$.each(json, function(i, item) {
 										var Tclass=(i%2==0)?'even gradeC':'odd gradeX';
-										var isVeg=(item.is_veg === 1) ? '<i class="fa fa-check"></i>' :'<i class="fa fa-times"></i>';
+										var isVeg=(item.is_veg*1 === 1) ? '<i class="fa fa-check"></i>' :'<i class="fa fa-times"></i>';
 										trHTML += '<tr class='+Tclass+'><td>' + item.id
 												+ '</td><td>' + item.status
 												+ '</td><td>' + item.race

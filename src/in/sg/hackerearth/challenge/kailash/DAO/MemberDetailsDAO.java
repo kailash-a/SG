@@ -3,6 +3,7 @@ package in.sg.hackerearth.challenge.kailash.DAO;
 import in.sg.hackerearth.challenge.kailash.beans.DataBean;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -47,8 +48,11 @@ public class MemberDetailsDAO {
 	public List<DataBean> searchDB(String criteria) throws SQLException{
 		List<DataBean> lst=new ArrayList();
 		Connection con=dataSource.getConnection();
-		String sql="select * from member where status like '%"+criteria+"%' OR race like '%"+criteria+"%'";
-		ResultSet rs=con.createStatement().executeQuery(sql);
+		String sql="select * from member where status like ? OR race like ?";
+		PreparedStatement pstmt=con.prepareStatement(sql);
+		pstmt.setString(1, "%"+criteria+"%");
+		pstmt.setString(2,"%"+criteria+"%");
+		ResultSet rs=pstmt.executeQuery();
 		while(rs.next()){
 			dataBean=new DataBean();
 			dataBean.setId(rs.getString("id"));

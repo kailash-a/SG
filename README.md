@@ -21,21 +21,21 @@ SG
 ##### Importing DB values from CSV
 
 The *member_details.CSV* is placed inside WEB-INF folder and consequently read by the **DBImportListener** at context initialization time and after that the values are persisted in the Postgres DB with the help of Spring-MVC dataSource configured inside the *applicationContext.xml*
-```sh
+
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="org.postgresql.Driver" />
 		<property name="url" value="jdbc:postgresql://localhost:5432/sg" />
 		<property name="username" value="postgres" />
 		<property name="password" value="postgres" />
 	</bean>	
-```sh
+
 
 For running the application provide your DB parameters for running
 
 ##### DB Member table Structure
 First initialized a Database and create a table with following schema.
 
-```sh
+
 	CREATE TABLE member
 	(
   		id character varying(10),
@@ -45,7 +45,6 @@ First initialized a Database and create a table with following schema.
   		height character varying(10),
   		is_veg character varying(10)
 	)
-```sh
 
 
 ##### Displaying Users

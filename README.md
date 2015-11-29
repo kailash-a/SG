@@ -28,7 +28,7 @@ The *member_details.CSV* is placed inside WEB-INF folder and consequently read b
 		<property name="username" value="postgres" />
 		<property name="password" value="postgres" />
 	</bean>	
-```
+```sh
 For running the application provide your DB parameters for running
 
 ##### DB Member table Structure

@@ -20,4 +20,9 @@ public class MemberDetails implements MemberDetailsService {
 		return memberDAO.getAllMembers(); 
 	}
 
+	@Override
+	public List<DataBean> SearchDB(String criteria) throws Exception {
+		return memberDAO.searchDB(criteria);
+	}
+
 }

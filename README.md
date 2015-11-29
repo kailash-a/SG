@@ -1,6 +1,7 @@
 
 SG
 ===============
+### SG(HackerEarth Recruitment Test App)
 ##### Simple Spring MVC application with eclipse IDE(not with Maven) Task Done
 
   -Importing CSV file to Postgres DB at deployment time
@@ -14,6 +15,8 @@ SG
   -Converting Ethnic Group from Int to String.
   
   -Convertin weight from gms to Kg,s.
+  
+  -Spring Rest based Searching
 
 ##### Importing DB values from CSV
 
@@ -28,14 +31,32 @@ The *member_details.CSV* is placed inside WEB-INF folder and consequently read b
 ```
 For running the application provide your DB parameters for running
 
+##### DB Member table Structure
+
+Firts initialized a Database and create a table with following schema.
+```sh
+	CREATE TABLE member
+	(
+  		id character varying(10),
+  		status text,
+  		race character varying(20),
+  		weight character varying(8),
+  		height character varying(10),
+  		is_veg character varying(10)
+	)
+```sh
+
+
 ##### Displaying Users
 
-At the startUp *index.jsp* is called which redirects the request to the welcome.jsp which is intercepted by the @Controller and appropriate parameters and all member Data is passed to the jsp page. All the values passed from the @Controller are then rendered on jsp with the help of JSTL tag Lib. In addition Bootstrap Front end library is used and bootstrap datatable plugin is used to meet the searching criteria.
+At the startUp *index.jsp* is called which redirects the request to the welcome.jsp which is intercepted by the @Controller. Controller injects all necessary parameters and a list of members(*trimmed size of list to only contain 50 members details*).All the values passed from the @Controller are then rendered on jsp with the help of JSTL tag Lib. In addition Bootstrap Front end library is used and bootstrap datatable plugin is used to meet the searching criteria.
+In addition a search box is provided which can be used to look up in database and search on the basis of status and race. This calls the Spring @Controller and then searched result is returned as json which is then rendered to the Search Result table.
 
 
 ##### Further Improvements
 
-Although it doesnot meets the requirements like searching by calling Spring rest to search a user by status/id etc. but this solution can also works for small DB Store.
+~~Although it doesnot meets the requirements like searching by calling Spring rest to search a user by status/id etc. but this solution can also works for small DB Store.~~
+
 
 ##### Sample Screen Shot
-![alt tag](https://github.com/kailash-a/SG/blob/master/WebContent/resources/img/screenshot.png)
+![alt tag](https://github.com/kailash-a/SG/blob/master/WebContent/resources/img/screenshotnew.png)

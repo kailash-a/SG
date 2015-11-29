@@ -43,5 +43,24 @@ public class MemberDetailsDAO {
 		
 		return lst;
 	}
+	
+	public List<DataBean> searchDB(String criteria) throws SQLException{
+		List<DataBean> lst=new ArrayList();
+		Connection con=dataSource.getConnection();
+		String sql="select * from member where status like '%"+criteria+"%' OR race like '%"+criteria+"%'";
+		ResultSet rs=con.createStatement().executeQuery(sql);
+		while(rs.next()){
+			dataBean=new DataBean();
+			dataBean.setId(rs.getString("id"));
+			dataBean.setStatus(rs.getString("status"));
+			dataBean.setRace(rs.getString("race"));
+			dataBean.setWeight(rs.getString("weight"));
+			dataBean.setHeight(rs.getString("height"));
+			dataBean.setIs_veg(rs.getString("is_veg"));
+			lst.add(dataBean);
+		}
+		
+		return lst;
+	}
 
 }

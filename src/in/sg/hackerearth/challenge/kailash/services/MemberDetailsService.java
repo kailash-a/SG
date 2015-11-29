@@ -6,4 +6,5 @@ import in.sg.hackerearth.challenge.kailash.beans.DataBean;
 
 public interface MemberDetailsService {
 	public List<DataBean> getAllMembers() throws Exception;
+	public List<DataBean> SearchDB(String criteria) throws Exception;
 }

@@ -61,4 +61,4 @@ In addition a search box is provided which can be used to look up in database an
 
 
 ##### Sample Screen Shot
-![alt tag](https://github.com/kailash-a/SG/blob/master/WebContent/resources/img/screenshotnew.png)
+![alt tag](https://github.com/kailash-a/SG/blob/master/WebContent/resources/img/Screenshotnew.png)

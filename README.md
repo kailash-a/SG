@@ -29,11 +29,12 @@ The *member_details.CSV* is placed inside WEB-INF folder and consequently read b
 		<property name="password" value="postgres" />
 	</bean>	
 ```sh
+
 For running the application provide your DB parameters for running
 
 ##### DB Member table Structure
+First initialized a Database and create a table with following schema.
 
-Firts initialized a Database and create a table with following schema.
 ```sh
 	CREATE TABLE member
 	(
